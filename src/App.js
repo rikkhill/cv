@@ -15,7 +15,21 @@ class App extends Component {
         header: {
           name: "Rikk Hill",
           profile: "I am a software developer and Machine Learning specialist with a varied 15-year career in the tech sector.\n\nI like cheese.",
-          identityItems: ["GitHub", "LinkedIn", "StackOverflow"],
+          webLinks: [
+            {
+              icon: 'github',
+              href: 'https://github.com/rikkhill',
+            },
+            {
+              icon: 'linkedin',
+              href: 'https://www.linkedin.com/in/rikkhill/',
+            },
+            {
+              icon: 'stack-overflow',
+              href: 'https://stackoverflow.com/users/639659/r-hill',
+            },
+
+          ],
         },
         positions: [
           {
@@ -24,7 +38,7 @@ class App extends Component {
             title: "Digital Labs Fellow: Senior Data Scientist and Backend Developer",
             startDate: "Sept 2016",
             endDate: "Present",
-            copy: "Doing cool things for the social sector, yo.",
+            copy: "Doing cool things for the social sector, yo."
           },
         ],
       },

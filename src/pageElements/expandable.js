@@ -18,8 +18,11 @@ class Expandable extends Component {
           <span
             onClick={e =>
               this.setState((prevState) => ({ visible: !prevState.visible }))}
-            className="pseudolink">
-            {this.state.visible ? '[-]' : '[+]'}
+            className="pseudolink"
+          >
+            <pre style={{display: "inline"}}>
+              {this.state.visible ? '[-]' : '[+]'}
+            </pre>
           </span>
         </div>
         { this.state.visible ?

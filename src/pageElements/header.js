@@ -1,12 +1,10 @@
 import React, { Component } from 'react';
+import MediaLink from './mediaLink';
 
 class Header extends Component {
 
-  constructor(props) {
-    super(props);
-  }
-
   render() {
+    console.log(this.props);
     return (
       <div className="container mt-3 mb-2">
         <div className="row border-bottom mb-1">
@@ -14,12 +12,12 @@ class Header extends Component {
             <h1>{this.props.name}</h1>
           </div>
           <div className="col-sm-4">
-          {this.props.identityItems.map((c, i) =>
-            <div className="row" key={i}>
-              <span className="text-right">
-                {c}
-              </span>
-            </div>
+          {this.props.webLinks.map((c, i) =>
+            <MediaLink
+              icon={c.icon}
+              href={c.href}
+              key={i}
+            />
             )}
           </div>
         </div>

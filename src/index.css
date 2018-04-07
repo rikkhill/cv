@@ -13,3 +13,11 @@ body {
 .display-linebreak {
   white-space: pre-line;
 }
+
+.icon-link {
+  color: #414549;
+}
+
+.icon-link:hover {
+  color: #000000;
+}

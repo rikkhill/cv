@@ -4,9 +4,14 @@
   "private": true,
   "homepage": "https://rikkhill.github.io/cv",
   "dependencies": {
+    "@fortawesome/fontawesome": "^1.1.5",
+    "@fortawesome/fontawesome-free-brands": "^5.0.9",
+    "@fortawesome/fontawesome-free-solid": "^5.0.9",
+    "@fortawesome/react-fontawesome": "0.0.18",
     "react": "^16.2.0",
     "react-bootstrap": "^0.32.1",
     "react-dom": "^16.2.0",
+    "react-fontawesome": "^1.6.1",
     "react-scripts": "1.1.1"
   },
   "scripts": {

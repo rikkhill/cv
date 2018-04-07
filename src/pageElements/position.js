@@ -3,10 +3,6 @@ import Expandable from './expandable';
 
 class Position extends Component {
 
-  constructor(props) {
-    super(props);
-  }
-
   render() {
     return (
       <div className="container border rounded">
