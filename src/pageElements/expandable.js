@@ -13,8 +13,14 @@ class Expandable extends Component {
     return (
       <div className="container">
         <div>
-          {this.props.header}
-          <span onClick={e => this.setState({ visible: true })}> [+]</span>
+          <span>{this.props.header}</span>
+          {' '}
+          <span
+            onClick={e =>
+              this.setState((prevState) => ({ visible: !prevState.visible }))}
+            className="pseudolink">
+            {this.state.visible ? '[-]' : '[+]'}
+          </span>
         </div>
         { this.state.visible ?
         <div>{this.props.copy}</div> : null }

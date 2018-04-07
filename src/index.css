@@ -4,6 +4,12 @@ body {
   font-family: sans-serif;
 }
 
+.pseudolink {
+  text-decoration: underline;
+  cursor: pointer;
+  color: #222299;
+}
+
 .display-linebreak {
   white-space: pre-line;
 }
