@@ -10,10 +10,10 @@ class MediaLink extends Component {
 
   render() {
     return (
-      <div>
+      <span>
         <a
           href={this.props.href}
-          className="icon-link"
+          className="text-light"
           target="_blank"
         >
           <FontAwesomeIcon
@@ -21,7 +21,8 @@ class MediaLink extends Component {
             size='2x'
           />
         </a>
-      </div>
+        {'  '}
+      </span>
     );
   }
 }
