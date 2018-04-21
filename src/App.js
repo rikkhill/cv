@@ -1,6 +1,8 @@
 import React, { Component } from 'react';
 import Header from './pageElements/Header';
 import PositionGroup from './pageElements/PositionGroup';
+import Section from './pageElements/Section';
+import Qualification from './pageElements/Qualification';
 import Profile from './pageElements/Profile';
 
 class App extends Component {
@@ -90,6 +92,30 @@ class App extends Component {
             projectsAndAchievements: []
           },
         ],
+        "qualifications": [
+          {
+            "level": "Bachelor of Science",
+            "subject": "Economics and Mathematical Sciences",
+            "grade": "First Class Honours",
+            "institution": "The Open University",
+            "institutionURL": "https://www.open.ac.uk",
+            "start": "2009",
+            "end": "2015",
+            "copy": "I completed this degree on a part-time basis over six years while working full time in my contemporaneous roles. The content of the degree was mostly undergraduate mathematics, with an emphasis on theoretical and practical statistics, as well as a substantial compoent of econometrics and economic policy, and an elective component in engineering.",
+            "dissertation": "My dissertation for this degree was an econometric analysis into the impact of education on the ratio of leisure to non-leisure household spending.",
+          },
+          {
+            "level": "Master of Science",
+            "subject": "Computational Statistics and Machine Learning",
+            "grade": "Distinction",
+            "institution": "University College London",
+            "institutionURL": "https://www.ucl.ac.uk",
+            "start": "2015",
+            "end": "2016",
+            "copy": "I took a year off work to complete this full-time Masters degree, which comprehensively covered a wide variety of theoretical and applied Machine Learning material.",
+            "dissertation": "My dissertation for this degree was on the use of side-information in low-rank matrix factorisation for collaborative filtering-based commercial recommender systems.",
+          },
+        ],
       },
     };
   }
@@ -102,6 +128,11 @@ class App extends Component {
         <Header { ...this.state.cv.header } />
         <Profile {...this.state.cv.profile} />
         <PositionGroup positions={this.state.cv.positions} />
+        <Section
+          title="Qualifications"
+          component={Qualification}
+          items={this.state.cv.qualifications}
+        />
       </div>
       <div className="col-md-3 mt-3 small">
         <p>
