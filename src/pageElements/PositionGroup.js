@@ -1,11 +1,7 @@
 import React, { Component } from 'react';
 import Position from './Position'
 
-class Grouping extends Component {
-
-  constructor(props) {
-    super(props);
-  }
+class PositionGroup extends Component {
 
   render() {
 
@@ -25,4 +21,4 @@ class Grouping extends Component {
   }
 }
 
-export default Grouping;
+export default PositionGroup;

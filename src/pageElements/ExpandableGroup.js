@@ -10,7 +10,7 @@ class ExpandableGroup extends Component {
 
     return (
       <div>
-        <h5 className="display-5">
+        <h5 className="display-5 ml-2">
           <strong>{this.props.title}</strong>
         </h5>
         {expandables}

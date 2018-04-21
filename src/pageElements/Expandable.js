@@ -16,7 +16,7 @@ class Expandable extends Component {
 
   render() {
     return (
-      <div className="row mt-2">
+      <div className="row mt-2 ml-2">
         <div className="col-md-12">
           <span
             onClick={e =>

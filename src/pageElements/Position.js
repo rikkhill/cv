@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import Expandable from './Expandable';
+import ExpandableGroup from './ExpandableGroup';
 
 class Position extends Component {
 
@@ -20,7 +20,7 @@ class Position extends Component {
             </h6>
           </div>
         </div>
-        <div className="row mt-2 border-bottom">
+        <div className="row pt-2 pb-1 border-bottom bg-dark text-light">
           <div className="col-md-8">
             <a
               href={this.props.companyWebsite}
@@ -40,10 +40,11 @@ class Position extends Component {
         </div>
         <div className="row">
           <div className="col-md-10">
-            <Expandable
-              header="Doing Cool Things"
-              copy="Here are some of the amazing cool things that Rikk has done..."
-            />
+          { this.props.projectsAndAchievements.length > 0 ?
+            <ExpandableGroup
+              title="Projects and Achievements"
+              expandables={this.props.projectsAndAchievements} /> :
+              '' }
           </div>
         </div>
       </div>

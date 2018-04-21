@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-import ExpandableGroup from './ExpandableGroup';
 import MediaLink from './MediaLink';
 
 class Header extends Component {
@@ -20,16 +19,6 @@ class Header extends Component {
             />
             )}
           </div>
-        </div>
-        <h4 className="display-5">
-          <strong>Profile</strong>
-        </h4>
-        <div className="row mt-2 ml-2 mb-3 display-linebreak">
-          {this.props.profile.split("\n").map((c, i) =>
-            <p key={i}>{c}</p>)}
-          <ExpandableGroup
-            title="Unique Selling Points"
-            expandables={this.props.usps} />
         </div>
       </div>
     );

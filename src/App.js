@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import Header from './pageElements/Header';
 import PositionGroup from './pageElements/PositionGroup';
+import Profile from './pageElements/Profile';
 
 class App extends Component {
 
@@ -14,21 +15,6 @@ class App extends Component {
         meta: {},
         header: {
           name: "Rikk Hill",
-          profile: "I am a software developer and Machine Learning specialist with a varied 15-year career in the tech sector.\n",
-          usps: [ // unique selling points!
-            {
-              header: "Academic Machine Learning background alongside heavy commercial development experience",
-              copy: "A lot of Machine Learning engineers and \"data scientists\" tend to be either academics with shallow dev experience, or career-developers with a superficial Machine Learning background. I am the best of both worlds. As a full-blooded developer, I understand the nuts and bolts of building good software, while my academic background lets me understand theoretical aspects of Machine Learning to considerable technical depth.",
-            },
-            {
-              header: "A broad set of experience across many types of problem domains",
-              copy: "Having worked in a lot of different environments on a lot of different kinds of problem",
-            },
-            {
-              header: "A strong jawline",
-              copy: "Not actually that helpful, but I need a third thing as a placeholder",
-            }
-          ],
           webLinks: [
             {
               icon: 'github',
@@ -45,6 +31,23 @@ class App extends Component {
 
           ],
         },
+        profile: {
+          copy: "I am a software developer and Machine Learning specialist with a varied 15-year career in the tech sector.\n",
+          usps: [ // unique selling points!
+            {
+              header: "Academic Machine Learning background alongside heavy commercial development experience",
+              copy: "A lot of Machine Learning engineers and \"data scientists\" tend to be either academics with shallow dev experience, or career-developers with a superficial Machine Learning background. I am the best of both worlds. As a full-blooded developer, I understand the nuts and bolts of building good software, while my academic background lets me understand theoretical aspects of Machine Learning to considerable technical depth.",
+            },
+            {
+              header: "A broad set of experience across many types of problem domains",
+              copy: "Having worked in a lot of different environments on a lot of different kinds of problem",
+            },
+            {
+              header: "A strong jawline",
+              copy: "Not actually that helpful, but I need a third thing as a placeholder",
+            }
+          ],
+        },
         positions: [
           {
             company: "Social Finance Digital Labs",
@@ -53,7 +56,8 @@ class App extends Component {
             subtitle: "Senior Data Scientist and Backend Developer",
             startDate: "Sept 2016",
             endDate: "Present",
-            copy: "Doing cool things for the social sector, yo."
+            copy: "Doing cool things for the social sector, yo.",
+            projectsAndAchievements: []
           },
           {
             company: "NET-A-PORTER",
@@ -62,7 +66,8 @@ class App extends Component {
             subtitle: "Full-stack developer on in-house logistics systems",
             startDate: "Dec 2013",
             endDate: "Sept 2015",
-            copy: "Selling expensive clothes to people"
+            copy: "Selling expensive clothes to people",
+            projectsAndAchievements: []
           },
           {
             company: "NET-A-PORTER",
@@ -71,7 +76,8 @@ class App extends Component {
             subtitle: "Application Support Team",
             startDate: "Sept 2011",
             endDate: "Dec 2013",
-            copy: "Helping people sell expensive clothes to people"
+            copy: "Helping people sell expensive clothes to people",
+            projectsAndAchievements: []
           },
           {
             company: "UKMail",
@@ -80,7 +86,8 @@ class App extends Component {
             subtitle: "Systems and Database Administrator",
             startDate: "Jul 2008",
             endDate: "Sept 2011",
-            copy: "Moving boxes from one place to another"
+            copy: "Moving boxes from one place to another",
+            projectsAndAchievements: []
           },
         ],
       },
@@ -93,6 +100,7 @@ class App extends Component {
     <div className="row">
       <div className="col-md-9">
         <Header { ...this.state.cv.header } />
+        <Profile {...this.state.cv.profile} />
         <PositionGroup positions={this.state.cv.positions} />
       </div>
       <div className="col-md-3 mt-3 small">
